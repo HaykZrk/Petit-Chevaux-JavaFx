@@ -4,3 +4,4 @@
 ### Added
 - Le fichier des règles du jeu des "petits chevaux"
 - Première version du diagramme UML
+- Maquette graphique
