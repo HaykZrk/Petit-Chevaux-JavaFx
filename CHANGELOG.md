@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1]
+### Added 21-06-2022
+- Elaboration du menu principal
+- Elaboration de la fenêtre du choix du nombre de joueur
+- Travail sur le design (images, son, style)
+- Organisation du code
+- Utilisation de maven et pom.xml pour la construction du fichier jar
+
 ## [1.0] 21-05-2022
 ### Added
 - Le fichier des règles du jeu des "petits chevaux"

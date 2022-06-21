@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="fenetre" onMouseEntered="#responsiveFenetre" pickOnBounds="false" prefHeight="800.0" prefWidth="700.0" stylesheets="@../CSS/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hayk.application.MenuController">
+   <children>
+      <Button fx:id="jouerButton" layoutX="110.0" layoutY="122.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#choixNombreJoueur" prefHeight="100.0" prefWidth="481.0" style="-fx-border-color: black; -fx-border-width: 4;" text="JOUER">
+         <font>
+            <Font name="Wide Latin" size="45.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="cheval" disable="true" fitHeight="558.0" fitWidth="346.0" layoutX="351.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/MenuChevalImage.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="titre" fill="WHITE" layoutX="43.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Petits chevaux">
+         <font>
+            <Font name="Wide Latin" size="49.0" />
+         </font>
+      </Text>
+      <Button fx:id="optionsButton" layoutX="110.0" layoutY="257.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="481.0" style="-fx-border-color: black; -fx-border-width: 4;" text="OPTIONS">
+         <font>
+            <Font name="Wide Latin" size="45.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="annee1936" fill="WHITE" layoutX="242.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1936">
+         <font>
+            <Font name="Wide Latin" size="49.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/MenuImpactBalleImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="215.0" fitWidth="545.0" layoutX="-101.0" layoutY="-76.0" smooth="false">
+         <image>
+            <Image url="@../Images/MenuFlammeImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="169.0" layoutX="58.0" layoutY="408.0" smooth="false">
+         <image>
+            <Image url="@../Images/MenuFlammeAnimeImage.gif" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow choke="0.48" height="255.0" radius="127.0" width="255.0" />
+   </effect>
+</AnchorPane>
