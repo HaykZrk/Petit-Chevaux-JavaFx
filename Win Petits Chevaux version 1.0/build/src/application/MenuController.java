@@ -1,5 +1,6 @@
 package com.hayk.application;
 
+import com.hayk.dessin.ConstructionPlateau;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,34 +27,24 @@ public class MenuController implements Initializable {
 
     @FXML
     private AnchorPane fenetre;
-
     @FXML
     private Text titre;
-
     @FXML
     private Button jouerButton;
-
     @FXML
     private Button optionsButton;
-
     @FXML
     private Text annee1936;
-
     @FXML
     private ImageView cheval;
-
     @FXML
     private Button deuxJoueurs;
-
     @FXML
     private Button troisJoueurs;
-
     @FXML
     private Button quatreJoueurs;
-
     @FXML
     private Button retourMenu;
-
     @FXML
     private Text nombreJoueur;
 
@@ -260,6 +251,7 @@ public class MenuController implements Initializable {
      * @throws IOException
      */
     public void choixNombreJoueur(javafx.event.ActionEvent event) throws IOException {
+        Launcher.getmP().stop();
         stageMenuController = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(Launcher.loadFXML("XML/ChoixNombreJoueur"));
         stageMenuController.setScene(scene);
@@ -273,11 +265,28 @@ public class MenuController implements Initializable {
      * @throws IOException
      */
     public void retourMenu(javafx.event.ActionEvent event) throws IOException {
+        Launcher.getmP().play();
         stageMenuController = (Stage) ((Node)event.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("XML/Menu.fxml"));
         root = loader.load();
         scene = new Scene(root);
         stageMenuController.setScene(scene);
         stageMenuController.show();
+    }
+
+    /**
+     * Création du plateau selon le nombre de joueur.
+     * @param event
+     * @throws IOException
+     */
+    public void plateau(javafx.event.ActionEvent event) throws IOException {
+        stageMenuController = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        if (deuxJoueurs.isArmed()){
+            ConstructionPlateau plateau = new ConstructionPlateau(stageMenuController);
+        } else if (troisJoueurs.isArmed()) {
+            ConstructionPlateau plateau = new ConstructionPlateau(stageMenuController);
+        } else {
+            ConstructionPlateau plateau = new ConstructionPlateau(stageMenuController);
+        }
     }
 }

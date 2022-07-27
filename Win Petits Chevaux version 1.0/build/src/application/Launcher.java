@@ -14,14 +14,21 @@ import java.io.IOException;
  * Fichier principal qui lance le menu.
  */
 public class Launcher extends Application {
-    /*
-    Récupération des caractéristiques de l'écran de l'utilisateur.
-     */
     private static final GraphicsDevice ECRAN_USER = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     private static final int largeurStage = ECRAN_USER.getDisplayMode().getWidth();
     private static final int hauteurStage = ECRAN_USER.getDisplayMode().getHeight();
     private static double largeurScene = largeurStage/3.0;
     private static double hauteurScene = hauteurStage/2.5;
+    private static InterfaceFXObjectConstruction FXObjectConstructor = new InterfaceFXObjectConstruction();
+    private static MediaPlayer mP;
+
+    /**
+     * Récupération du média player.
+     * @return : Le media player
+     */
+    public static MediaPlayer getmP() {
+        return mP;
+    }
 
     /**
      * Récupération de la largeur de la scène.
@@ -51,8 +58,6 @@ public class Launcher extends Application {
      */
     public static void setHauteurScene(double hauteurScene){Launcher.hauteurScene = hauteurScene;}
 
-    private static InterfaceFXObjectConstruction FXObjectConstructor = new InterfaceFXObjectConstruction();
-
     /**
      * Récupération de l'usine de construction d'objets.
      * @return : Usine de construction
@@ -72,9 +77,8 @@ public class Launcher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Scene sceneMenu = new Scene(loadFXML("XML/Menu"));
-        MediaPlayer mP = getFXObjectConstructor().media("Audio/MenuFlammeSon.mp3");
+        mP = getFXObjectConstructor().media("Audio/MenuFlammeSon.mp3");
         mP.setVolume(0.5);
-        mP.setCycleCount(5);
 
         stage.setMinWidth(716);
         stage.setMinHeight(839);
@@ -102,6 +106,5 @@ public class Launcher extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 
 }

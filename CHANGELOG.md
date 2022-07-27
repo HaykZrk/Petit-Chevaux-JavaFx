@@ -1,7 +1,15 @@
 # Changelog
 
-## [1.1]
-### Added 21-06-2022
+## [1.2] 27-07-2022
+### Added
+- Construction du plateau de jeu
+- Design du plateau
+- Organisation du code
+- Commenter le code
+
+
+## [1.1] 21-06-2022
+### Added 
 - Elaboration du menu principal
 - Elaboration de la fenêtre du choix du nombre de joueur
 - Travail sur le design (images, son, style)

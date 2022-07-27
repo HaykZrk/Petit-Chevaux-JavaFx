@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.hayk","l":"com.hayk"},{"m":"com.hayk","l":"com.hayk.application"},{"m":"com.hayk","l":"com.hayk.dessin"},{"m":"com.hayk","l":"com.hayk.jeu"}];updateSearchResults();
